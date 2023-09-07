@@ -1,0 +1,27 @@
+.navLink{
+    margin-right: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.active{
+    border: 2px solid white;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    
+}
+.mainLogo{
+    width: 64px;
+    height: 72px;
+}
+.custom-toggler-icon {
+    color: white !important; /* Icon rengini beyaz yapar */
+    border-color: white;
+    
+  }
+
+
