@@ -3,7 +3,7 @@
     flex-direction: column; 
     align-items: center; 
     text-align: center;
-    min-height: 7.5vh;
+    
     
   }
   @media (max-height: 600px) {
@@ -14,14 +14,12 @@
     margin-bottom: 10px;
     transform: scale(1);
   }
-  .mainFooter{
-    min-height: 50px;
-  }
 
 }
 .mainFooter{
     color: #fff;
     font-size: 0.5rem;
+    min-height: 10vh;
 }
 .icons{
     padding-top: 15px;
@@ -29,9 +27,7 @@
     padding-bottom: 10px;
     margin-bottom: 10px;
 }
-.icon{
-    margin-left: 10px;
-}
+
 a{
     color: white;
 }

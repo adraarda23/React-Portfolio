@@ -21,7 +21,7 @@ function Contact() {
     validationSchema,
     onSubmit: async (values) => {
       try {
-        //Email göndermesi için gerekli API kurulduktan sonra bağlantısı buraya yapılacak
+        // Email göndermesi için gerekli API kurulduktan sonra bağlantısı buraya yapılacak
         formik.resetForm();
 
         console.log("Form submitted:", values);
@@ -48,7 +48,7 @@ function Contact() {
           </h4>
         </div>
         <form onSubmit={formik.handleSubmit} className="form" autoComplete="off">
-          <div className="input-group">
+          <div className={`input-group ${formik.errors.name ? "error" : ""}`}>
             <input
               type="text"
               name="name"
@@ -56,11 +56,11 @@ function Contact() {
               placeholder="Name"
               onChange={formik.handleChange}
               value={formik.values.name}
-              ref={nameInputRef} 
+              ref={nameInputRef}
             />
             <span className="error">{formik.errors.name ? formik.errors.name : null}</span>
           </div>
-          <div className="input-group">
+          <div className={`input-group ${formik.errors.email ? "error" : ""}`}>
             <input
               type="email"
               name="email"
@@ -71,7 +71,7 @@ function Contact() {
             />
             <span className="error">{formik.errors.email ? formik.errors.email : null}</span>
           </div>
-          <div className="input-group">
+          <div className={`input-group ${formik.errors.message ? "error" : ""}`}>
             <textarea
               name="message"
               id="message"
