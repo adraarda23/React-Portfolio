@@ -84,6 +84,7 @@ input:hover , textarea:hover{
 
   .contact{
     min-height: 85vh;
+    background-color: rgb(220, 220, 220);
   }
 @media (max-height: 768px){
     .contact-text{
@@ -104,24 +105,8 @@ input:hover , textarea:hover{
     }
     
 }
-@media (min-height:1000px){
 
-.inner_contact{
-    height: 90vh;
-}
-textarea{
-    height: 20rem;
-}
-.form button{
-    height: 5rem;
-}
-input{
-    height: 5rem;
-}
-}
-.form-group {
-    display: flex;
-  }
+
   
   .error {
     font-size: 0.8rem; 
@@ -132,22 +117,44 @@ input{
     .form button{
         width: 80%;
     }
-    textarea{
-        width: 80%;
-    }
     input,textarea{
         margin-top: 5px;
         font-size: 0.75rem;
+        width: 100%;
     }
     h4{
         margin-bottom: 0px;
     }
+    .input-group.error {
+        padding: 5px 0px;
+    }
+
+    .error {
+        margin-top: 5px;
+    }
+    span{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        
+    }
+    .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    textarea {
+        width: 100%; 
+        box-sizing: border-box;
+    }
+    .input-group textarea {
+        width: 100%;
+    }
 
   }
-  .input-group{
-    padding: 15px 20px;
-    
-  }
+.input-group{
+    padding: 10px 0px;
+}
 
   
   
