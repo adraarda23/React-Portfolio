@@ -83,7 +83,7 @@ input:hover , textarea:hover{
 }
 
   .contact{
-    display: block;
+    min-height: 85vh;
   }
 @media (max-height: 768px){
     .contact-text{

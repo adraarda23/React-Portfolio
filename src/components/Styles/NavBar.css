@@ -23,5 +23,8 @@
     border-color: white;
     
   }
+  .mainNavbar{
+    min-height: 7.5vh;
+  }
 
 
