@@ -95,7 +95,7 @@ input:hover , textarea:hover{
     }
     .form button{
         height: 3rem !important;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     
     }
     input{
@@ -145,8 +145,8 @@ input{
 
   }
   .input-group{
-    padding: 5px 20px;
-    margin:10px 0px
+    padding: 15px 20px;
+    
   }
 
   
