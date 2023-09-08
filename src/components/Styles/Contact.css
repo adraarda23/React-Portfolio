@@ -9,7 +9,7 @@
     
     }
 .form button{
-    margin:10px 0px;
+    margin:20px 15px;
     width: 30%;
     height: 4rem;
     border: none;
@@ -22,7 +22,7 @@
 input,textarea{
     border: none;
     border-radius: 5px;
-    width: 50%;
+    width: 40%;
     background-color: rgb(220, 220, 220);
     resize: none;
     overflow: hidden;
@@ -37,6 +37,7 @@ input:focus, textarea:focus {
     color: black;
     border: 1px solid black;
     border-radius: 5px !important;
+    background-color: rgb(200, 200, 200);
 }
 ::placeholder{
     color: black;
@@ -45,9 +46,18 @@ input:focus, textarea:focus {
 input:focus::placeholder,textarea:focus::placeholder{
     color: black;
 }
+input:not(:placeholder-shown) {
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px !important;
+  }
+textarea:not(:placeholder-shown){
+    background-color: rgb(200, 200, 200);
+    border-radius: 5px !important;
+}
+
 .inner_contact{
     background-color: rgb(220, 220, 220);
-    height: 85vh;
+    
     
 
 }
@@ -57,6 +67,8 @@ textarea{
 }
 .contact-text{
     text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 span{
     color: rgb(255, 102, 102);
@@ -73,18 +85,24 @@ input:hover , textarea:hover{
   .contact{
     display: block;
   }
-@media (max-height: 600px){
+@media (max-height: 768px){
+    .contact-text{
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
     textarea{
         height: 7rem;
     }
     .form button{
-        height: 2rem;
+        height: 3rem !important;
+        margin-bottom: 3rem;
     
     }
     input{
         height: 2rem;
         
     }
+    
 }
 @media (min-height:1000px){
 
@@ -107,7 +125,7 @@ input{
   
   .error {
     font-size: 0.8rem; 
-    margin-left: 20px; 
+    
   }
   @media (max-width:768px){
 
@@ -125,6 +143,10 @@ input{
         margin-bottom: 0px;
     }
 
+  }
+  .input-group{
+    padding: 5px 20px;
+    margin:10px 0px
   }
 
   
