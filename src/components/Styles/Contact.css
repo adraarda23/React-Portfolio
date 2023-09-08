@@ -79,9 +79,11 @@ input:hover , textarea:hover{
     }
     .form button{
         height: 2rem;
+    
     }
     input{
         height: 2rem;
+        
     }
 }
 @media (min-height:1000px){
@@ -106,6 +108,23 @@ input{
   .error {
     font-size: 0.8rem; 
     margin-left: 20px; 
+  }
+  @media (max-width:768px){
+
+    .form button{
+        width: 80%;
+    }
+    textarea{
+        width: 80%;
+    }
+    input,textarea{
+        margin-top: 5px;
+        font-size: 0.75rem;
+    }
+    h4{
+        margin-bottom: 0px;
+    }
+
   }
 
   
