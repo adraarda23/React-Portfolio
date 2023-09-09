@@ -8,17 +8,16 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 function Footer() {
   return (
-    <footer className='mainFooter bg-dark'>
-<div className='footer-content'>
+<footer className='footer-content bg-dark'>
   <div className='icons'>
     <a href="https://www.linkedin.com/in/ardaaydınkılınç/"><LinkedInIcon className='icon'/></a>
     <a href="https://twitter.com/ardaydinkilinc"><TwitterIcon className='icon'/></a>
     <a href="https://github.com/adraarda23"><GitHubIcon/></a>
   </div>
   <div className='cr'><h4>Copyright2023© Arda Aydın Kılınç</h4></div>
-</div>
+</footer>
 
-    </footer>
+  
   )
 }
 
