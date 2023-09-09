@@ -2,3 +2,134 @@
     min-height: 85vh;
     background-color: rgb(220, 220, 220);
 }
+
+.inner-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+}
+.inner-about h1{
+    padding-bottom: 1.5rem;
+}
+.about-body{
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+}
+
+.about-left{
+    width: 40%;
+}
+.about-right{
+    width: 40%;
+}
+.about-left{
+    margin-right: 5rem;
+    
+}
+
+.about-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.skill-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    
+
+}
+
+.skills{
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: rgb(200, 200, 200);
+    margin: 0.3rem;
+    text-align: center;
+    
+}
+.skills h6{
+    font-size: 16px;
+    font-weight: bold;
+    display: absolute;
+
+}
+p a{
+    color: #000
+}
+.about-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    text-align: center;
+}
+
+@media (max-width:667px) {
+    .about-title{
+        width: 90%;
+    }
+    .about-left,.about-right{
+        width: 92%;
+        justify-content: center;
+        padding-top: 1.2rem;
+    }
+    .about-body{
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom:3rem ;
+    }
+    .about-left h3,p{
+        
+        margin: auto;
+        padding-left: 1rem;
+    }
+    .about-right h3{
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+    .about-left h3{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+}
+@media (min-height:992px){
+    .about-left,.about-right{
+        width: 92%;
+        justify-content: center;
+        padding-top: 1.2rem;
+    }
+    .about-body{
+        flex-direction: column;
+        padding-top: 1rem;
+        padding-bottom:3rem ;
+    }
+    .about-left h3,p{
+        
+        
+        padding-left: 2rem;
+    }
+    .about-right h3{
+        margin: auto;
+        padding-bottom: 1rem;
+    }
+    .about-left h3{
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .about-title{
+        width: 80%;
+    }
+    .skill-boxes{
+        width: 70%;
+        margin: auto;
+        
+    }
+    .skills h6{
+        font-size: 20px;
+    }
+}
