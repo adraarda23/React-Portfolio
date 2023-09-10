@@ -1,4 +1,103 @@
 .projects{
     background-color: rgb(220, 220, 220);
     min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top:4rem;
+}
+
+.projects-body{
+    display: flex;
+    flex-direction: column;
+   margin: 4rem 0rem;
+}
+.project__inner-body {
+    display: flex;
+    margin: 2rem 0rem;
+    
+}
+
+.project__inner-body-left {
+    width: 60%;
+}
+
+.project__inner-body-right {
+    width: 40%;
+    text-align: left;
+    padding-top: 4rem;
+}
+
+.project-image {
+    min-width: 60%; 
+    height: auto; 
+}
+
+.project__inner-body-right p{
+
+    padding-top: 2.2rem;
+    padding-bottom: 0.8rem;
+    width: 70%;
+}
+.case-study-btn{
+    background-color: rgb(200, 200, 200);
+    border: 2px solid #000;
+    border-radius: 5px;
+    height: 3rem;
+    width: 20% ;
+    
+}
+.case-study-btn a{
+    text-decoration: none;
+    color: #000;
+}
+
+@media (max-width:768px){
+    .project__inner-body{
+        flex-direction: column;
+        align-items: center;
+        margin: 1.5rem 0rem;
+        
+    }
+    .project__inner-body-right{
+        padding-top: 1.5rem;
+        width: 90%;
+        text-align: center;
+        
+    }
+    .project__inner-body-right p{
+        margin: 0;
+        width: 100%;
+        padding-top: 0.7rem;
+        text-align: left;
+    }
+    .case-study-btn{
+        width: fit-content;
+    }
+    .projects-body{
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+}
+@media (max-width: 992px) and (min-height: 768px) {
+    .case-study-btn {
+        width: 40%; /* Özel genişlik aralığı için düğme genişliği */
+        margin-bottom: 1rem; /* Alt boşluk */
+    }
+
+    .project__inner-body-right {
+        padding-top: 0.5rem; /* Üst boşluk */
+        padding-bottom: 1rem; /* Alt boşluk */
+    }
+
+    .project__inner-body-right h3 {
+        margin-top: 0rem; /* Başlık üst boşluk */
+        margin-bottom: 0.5rem; /* Başlık alt boşluk */
+    }
+
+    .project__inner-body-right p {
+        padding: 0.3rem 0rem;
+        width: 90%;
+    }
 }
