@@ -11,13 +11,13 @@ function Projects() {
       title: "Hafize Ana",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
-      link: "/projects/hafize-ana", // Projeye yönlendiren link
+      link: "/case-study/hafize-ana", // Projeye yönlendiren link
     },
     {
       title: "Başka Bir Proje",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
-      link: "/projects/other-project", // Projeye yönlendiren link
+      link: "/case-study/other-project", // Projeye yönlendiren link
     },
     // İhtiyacınıza göre diğer projeleri buraya ekleyin
   ];
@@ -47,7 +47,7 @@ function Projects() {
               <div className="case-study-btn">
               <Link to={project.link}>Case Study</Link>
               </div>
-               {/* Link bileşeni kullanarak projeyi yönlendirin */}
+               
             </div>
           </div>
         ))}
