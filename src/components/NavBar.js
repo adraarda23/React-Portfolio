@@ -25,7 +25,6 @@ function useActiveLink() {
 
 function NavBar() {
   const activeLink = useActiveLink();
-  console.log(activeLink)
 
   const handleMouseEnter = () => {
     activeLink.classList.remove("active");

@@ -108,9 +108,12 @@ p a{
         padding-top: 1rem;
         padding-bottom:3rem ;
     }
-    .about-left h3,p{
+    .about-left h3{
         
         
+        padding-left: 2rem;
+    }
+    .about-left p{
         padding-left: 2rem;
     }
     .about-right h3{
