@@ -44,10 +44,8 @@ function Projects() {
             <div className="project__inner-body-right">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <div className="case-study-btn">
-              <Link to={project.link}>Case Study</Link>
-              </div>
-               
+              
+              <button className="case-study-btn"><Link to={project.link}>Case Study</Link></button>
             </div>
           </div>
         ))}
