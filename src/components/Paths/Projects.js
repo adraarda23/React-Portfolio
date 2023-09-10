@@ -1,24 +1,25 @@
+// Projects.js
+
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Styles/Projects.css";
 import tempImage from "../../images/download.png";
 
 function Projects() {
-  //Resim yoksa default resim koyar
   const projectData = [
     {
       title: "Hafize Ana",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
-      link: "https://github.com/adraarda23/btu-sks-telegram-bot/tree/main",
-      image: "URL_BURAYA", 
+      link: "/projects/hafize-ana", // Projeye yönlendiren link
     },
     {
       title: "Başka Bir Proje",
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
-      link: "https://github.com/example/project",
-      
+      link: "/projects/other-project", // Projeye yönlendiren link
     },
+    // İhtiyacınıza göre diğer projeleri buraya ekleyin
   ];
 
   return (
@@ -36,16 +37,17 @@ function Projects() {
             <div className="project__inner-body-left">
               <img
                 className="project-image"
-                src={project.image || tempImage}
+                src={tempImage}
                 alt="projectImage"
               />
             </div>
             <div className="project__inner-body-right">
               <h3>{project.title}</h3>
               <p>{project.description}</p>
-              <button className="case-study-btn">
-                <a href={project.link}>Case Study</a>
-              </button>
+              <div className="case-study-btn">
+              <Link to={project.link}>Case Study</Link>
+              </div>
+               {/* Link bileşeni kullanarak projeyi yönlendirin */}
             </div>
           </div>
         ))}

@@ -46,6 +46,10 @@
     border-radius: 5px;
     height: 3rem;
     width: 20% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
     
 }
 .case-study-btn a{
@@ -74,6 +78,7 @@
     }
     .case-study-btn{
         width: fit-content;
+        margin: auto;
     }
     .projects-body{
         margin: 0;
@@ -82,18 +87,20 @@
 }
 @media (max-width: 992px) and (min-height: 768px) {
     .case-study-btn {
-        width: 40%; /* Özel genişlik aralığı için düğme genişliği */
-        margin-bottom: 1rem; /* Alt boşluk */
+        width: 40%; 
+         
+        margin-bottom: 1rem; 
+        
     }
 
     .project__inner-body-right {
-        padding-top: 0.5rem; /* Üst boşluk */
-        padding-bottom: 1rem; /* Alt boşluk */
+        padding-top: 0.5rem; 
+        padding-bottom: 1rem; 
     }
 
     .project__inner-body-right h3 {
-        margin-top: 0rem; /* Başlık üst boşluk */
-        margin-bottom: 0.5rem; /* Başlık alt boşluk */
+        margin-top: 0rem;
+        margin-bottom: 0.5rem; 
     }
 
     .project__inner-body-right p {
