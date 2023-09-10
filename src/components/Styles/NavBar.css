@@ -34,3 +34,13 @@
   .mainNavbar{
     min-height: 7.5vh;
   }
+
+  @media (max-width: 992px) {
+
+  
+
+    .navLink{
+        width:fit-content;
+    }
+  
+  }
