@@ -1,3 +1,14 @@
 .App{
-    background-color: rgb(220, 220, 220);
+    background-image: url("./images/background.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+    background-attachment: fixed ;
+    background-color: rgb(241, 241, 241);
+}
+@media (max-width:768px) {
+    .App{
+        background-color: rgb(241, 241, 241);
+        background-image: none;
+    }
+    
 }

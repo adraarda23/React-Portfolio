@@ -7,7 +7,7 @@ const PageTransition = ({ children }) => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.3 }}
-      style={{ backgroundColor: 'rgb(220, 220, 220)' }}
+      
     >
       {children}
     </motion.div>

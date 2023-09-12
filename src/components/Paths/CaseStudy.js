@@ -34,7 +34,7 @@ function CaseStudy() {
   if (!project) {
     return <div>Proje bulunamadı.</div>;
   }
-  console.log(project.activeLink?console.log(1):console.log(2))
+
 
   return (
     <PageTransition>

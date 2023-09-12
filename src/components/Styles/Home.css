@@ -1,5 +1,5 @@
 .home-container{
-    background-color: rgb(220,220,220) !important;
+    
     min-height: 80vh;
     display: flex;
     align-items: center;
@@ -16,6 +16,10 @@
 }
 .home p{
     text-align: left;
+    background-color: rgb(235,235,235);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
     
 }
 .home h1{
