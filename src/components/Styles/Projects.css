@@ -1,5 +1,5 @@
 .projects{
-    background-color: rgb(220, 220, 220);
+    
     min-height: 85vh;
     display: flex;
     flex-direction: column;
@@ -16,6 +16,7 @@
 .project__inner-body {
     display: flex;
     margin: 2rem 0rem;
+    flex-direction: row-reverse;
     
 }
 
@@ -27,6 +28,10 @@
     width: 40%;
     text-align: left;
     padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .project-image {
@@ -36,12 +41,14 @@
 
 .project__inner-body-right p{
 
-    padding-top: 2.2rem;
-    padding-bottom: 0.8rem;
+
+    padding: 2.2rem 5px 0.8rem 5px;
     width: 70%;
+
+    
 }
 .case-study-btn{
-    background-color: rgb(200, 200, 200);
+    background-color: #fff;
     border: 2px solid #000;
     border-radius: 5px;
     height: 3rem;
@@ -52,9 +59,12 @@
     padding: 0.5rem;
     
 }
+
+
 .case-study-btn a{
     text-decoration: none;
     color: #000;
+    font-weight: bold;
 }
 
 @media (max-width:768px){
@@ -108,3 +118,39 @@
         width: 90%;
     }
 }
+
+.scroll-effect {
+    position: relative;
+    width: 10px; 
+    height: 10px; 
+    background-color: #000; 
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: scrollAnimation 1.2s linear infinite;
+    opacity: 1;
+  }
+  
+  @keyframes scrollAnimation {
+    0%{
+      transform: translateY(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(400%);
+      opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 0;
+
+    }
+  }
+  .mouse{
+    border:2px solid #000;
+    border-radius: 20px;
+    height: 60px;
+    width: 40px;
+    margin-top: 1rem;
+}
+  
+  
