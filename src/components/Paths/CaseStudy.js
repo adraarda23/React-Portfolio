@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import "../Styles/CaseStudy.css";
 import tempImage from "../../images/download.png";
 import { Link } from "react-router-dom";
+import PageTransition from "../Animation/PageTransitions";
 
 function CaseStudy() {
   const { projectId } = useParams();
@@ -36,6 +37,7 @@ function CaseStudy() {
   console.log(project.activeLink?console.log(1):console.log(2))
 
   return (
+    <PageTransition>
     <div className="main-case-study">
       <div className="case-study-title">
         <h1>{project.title}</h1>
@@ -80,6 +82,7 @@ function CaseStudy() {
 </div>
       </div>
     </div>
+    </PageTransition>
   );
 }
 
