@@ -6,10 +6,10 @@ import PageTransition from "../Animation/PageTransitions";
 
 function Contact() {
   const validationSchema = Yup.object({
-    name: Yup.string().required("Name is required"),
+    name: Yup.string().required("*Name is required"),
     email: Yup.string()
-      .email("Invalid email address")
-      .required("Email is required"),
+      .email("*Invaild Email")
+      .required("*Email is required"),
     message: Yup.string(),
   });
 
@@ -44,40 +44,44 @@ function Contact() {
           </h4>
         </div>
         <form onSubmit={formik.handleSubmit} className="form" autoComplete="off">
-          <div className={`input-group ${formik.errors.name ? "error" : ""}`}>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Name"
-              onChange={formik.handleChange}
-              value={formik.values.name}
-            />
-            <span className="error">{formik.errors.name ? formik.errors.name : null}</span>
-          </div>
-          <div className={`input-group ${formik.errors.email ? "error" : ""}`}>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              onChange={formik.handleChange}
-              value={formik.values.email}
-            />
-            <span className="error">{formik.errors.email ? formik.errors.email : null}</span>
-          </div>
-          <div className={`input-group ${formik.errors.message ? "error" : ""}`}>
-            <textarea
-              name="message"
-              id="message"
-              cols="19"
-              rows="10"
-              placeholder="Message"
-              onChange={formik.handleChange}
-              value={formik.values.message}
-            ></textarea>
-            <span className="error">{formik.errors.message ? formik.errors.message : null}</span>
-          </div>
+        <div className={`input-group ${formik.touched.name && formik.errors.name ? "error" : ""}`}>
+  <input
+    type="text"
+    name="name"
+    id="name"
+    placeholder="(*)Name"
+    onChange={formik.handleChange}
+    onBlur={formik.handleBlur} 
+    value={formik.values.name}
+  />
+  <span className="error">{formik.touched.name && formik.errors.name ? formik.errors.name : null}</span>
+</div>
+<div className={`input-group ${formik.touched.email && formik.errors.email ? "error" : ""}`}>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder="(*)Email"
+    onChange={formik.handleChange}
+    onBlur={formik.handleBlur}
+    value={formik.values.email}
+  />
+  <span className="error">{formik.touched.email && formik.errors.email ? formik.errors.email : null}</span>
+</div>
+<div className={`input-group ${formik.touched.message && formik.errors.message ? "error" : ""}`}>
+  <textarea
+    name="message"
+    id="message"
+    cols="19"
+    rows="10"
+    placeholder="Message"
+    onChange={formik.handleChange}
+    onBlur={formik.handleBlur} 
+    value={formik.values.message}
+  ></textarea>
+  <span className="error">{formik.touched.message && formik.errors.message ? formik.errors.message : null}</span>
+</div>
+
           <button type="submit">Send Message</button>
         </form>
       </div>
