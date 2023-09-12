@@ -5,6 +5,17 @@ import { Link } from "react-router-dom";
 import "../Styles/Projects.css";
 import tempImage from "../../images/download.png";
 import PageTransition from "../Animation/PageTransitions";
+import {motion} from "framer-motion"
+const fadeInAnimationVariants = {
+  initial:{
+    opacity:0,
+    y:100,
+  },
+  animate:{
+    opacity:1,
+    y:0
+  }
+}
 
 function Projects() {
   const projectData = [
@@ -13,6 +24,36 @@ function Projects() {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
       link: "/case-study/hafize-ana", // Projeye yönlendiren link
+    },
+    {
+      title: "Başka Bir Proje",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
+      link: "/case-study/other-project", // Projeye yönlendiren link
+    },
+    {
+      title: "Başka Bir Proje",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
+      link: "/case-study/other-project", // Projeye yönlendiren link
+    },
+    {
+      title: "Başka Bir Proje",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
+      link: "/case-study/other-project", // Projeye yönlendiren link
+    },
+    {
+      title: "Başka Bir Proje",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
+      link: "/case-study/other-project", // Projeye yönlendiren link
+    },
+    {
+      title: "Başka Bir Proje",
+      description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
+      link: "/case-study/other-project", // Projeye yönlendiren link
     },
     {
       title: "Başka Bir Proje",
@@ -35,7 +76,16 @@ function Projects() {
       </div>
       <div className="projects-body">
         {projectData.map((project, index) => (
-          <div className="project__inner-body" key={index}>
+          <motion.div className="project__inner-body" 
+          key={index}
+          variants={fadeInAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{
+            once:true,
+          }}
+          
+          >
             <div className="project__inner-body-left">
               <img
                 className="project-image"
@@ -49,7 +99,7 @@ function Projects() {
               
               <button className="case-study-btn"><Link to={project.link}>Case Study</Link></button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
