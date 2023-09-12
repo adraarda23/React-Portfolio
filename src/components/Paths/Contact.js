@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "../Styles/Contact.css";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import PageTransition from "../Animation/PageTransitions";
 
 function Contact() {
   const validationSchema = Yup.object({
@@ -31,13 +32,8 @@ function Contact() {
     },
   });
 
-  const nameInputRef = useRef(null);
-
-  useEffect(() => {
-    nameInputRef.current.focus();
-  }, []);
-
   return (
+    <PageTransition>
     <div className="contact">
       <div className="inner_contact">
         <div className="contact-text">
@@ -56,7 +52,6 @@ function Contact() {
               placeholder="Name"
               onChange={formik.handleChange}
               value={formik.values.name}
-              ref={nameInputRef}
             />
             <span className="error">{formik.errors.name ? formik.errors.name : null}</span>
           </div>
@@ -87,6 +82,7 @@ function Contact() {
         </form>
       </div>
     </div>
+    </PageTransition>
   );
 }
 

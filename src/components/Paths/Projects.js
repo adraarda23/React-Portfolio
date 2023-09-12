@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Projects.css";
 import tempImage from "../../images/download.png";
+import PageTransition from "../Animation/PageTransitions";
 
 function Projects() {
   const projectData = [
@@ -23,6 +24,7 @@ function Projects() {
   ];
 
   return (
+    <PageTransition>
     <div className="projects">
       <div className="projects-title">
         <h1>PROJECTS</h1>
@@ -51,6 +53,7 @@ function Projects() {
         ))}
       </div>
     </div>
+    </PageTransition>
   );
 }
 

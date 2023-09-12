@@ -1,8 +1,10 @@
 import React from "react";
 import "../Styles/About.css";
+import PageTransition from "../Animation/PageTransitions";
 
 function About() {
   return (
+    <PageTransition>
     <div className="about">
       <div className="inner-about">
       <div className="about-title">
@@ -47,6 +49,7 @@ function About() {
         </div>
       </div>
     </div>
+    </PageTransition>
   );
 }
 
