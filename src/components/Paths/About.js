@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/About.css";
 import PageTransition from "../Animation/PageTransitions";
+import {motion} from "framer-motion"
 
 const skills = [
   "HTML",
@@ -13,6 +14,17 @@ const skills = [
   "Python",
   "SQL Basics",
 ];
+const fadeInAnimationVariants = {
+  initial:{
+    opacity:0,
+  },
+  animate: (index)=>({
+    opacity:1,
+    transition:{
+      delay:0.1 * index
+    }
+  })
+}
 
 function About() {
   return (
@@ -53,9 +65,15 @@ function About() {
               <h3>My Skills</h3>
               <div className="skill-boxes">
                 {skills.map((skill, index) => (
-                  <div className="skills" key={index}>
+                  <motion.div className="skills"
+                   key={index}
+                   variants={fadeInAnimationVariants}
+                   initial="initial"
+                   custom={index}
+                   whileInView="animate"
+                   >
                     <h6>{skill}</h6>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
