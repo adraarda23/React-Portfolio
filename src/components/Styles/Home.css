@@ -24,7 +24,7 @@
   .intro-text::before {
     content: attr(data-text);
     position: absolute;
-    left: 5.3px;
+    left: 4px;
     text-shadow: rgb(0, 0,0) -1px 0px;
     animation: 15s linear 5s infinite alternate-reverse none running noise-anim-2;
   }
