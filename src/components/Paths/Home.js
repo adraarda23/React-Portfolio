@@ -6,7 +6,7 @@ import PageTransition from "../Animation/PageTransitions";
 function Home() {
   const variants = {
     hidden: { opacity: 0, y: -100 }, 
-    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 3 } },
+    visible: { opacity: 1, y: 0, transition: { duration: 1, delay: 0.8 } },
   };
 
   return (
@@ -24,7 +24,7 @@ function Home() {
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 4 } }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1.8, delay: 2 } }}
           >
             I like making fun, and interactive things with code.
           </motion.p>
