@@ -25,7 +25,7 @@ function useActiveLink() {
 
 function NavBar() {
   const activeLink = useActiveLink();
-  const [homeLinkActive, setHomeLinkActive] = useState(true);
+  const [LinkActive, setLinkActive] = useState(true);
 
   const handleMouseEnter = () => {
     if (activeLink) {
@@ -62,7 +62,7 @@ function NavBar() {
   useEffect(() => {
     // "Home" linkine özel sınıfı ekler
     setTimeout(() => {
-      setHomeLinkActive(false); // 3 saniye sonra sınıfı kaldırır
+      setLinkActive(false); // 3 saniye sonra sınıfı kaldırır
     }, 2250); // 3000 milisaniye (3 saniye) gecikme
   }, []);
 
@@ -88,7 +88,7 @@ function NavBar() {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto NavBar">
               <NavLink
-                className={`navLink navlink-home ${homeLinkActive ? 'home-timer-active' : ''}`}
+                className={`navLink navlink-home ${LinkActive ? 'home-timer-active' : ''}`}
                 to="/"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -103,7 +103,7 @@ function NavBar() {
                 </motion.span>
               </NavLink>
               <NavLink
-                className="navLink navlink-about"
+                className={`navLink navlink-about ${LinkActive ? 'home-timer-active' : ''}`}
                 to="/about"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -118,7 +118,7 @@ function NavBar() {
                 </motion.span>
               </NavLink>
               <NavLink
-                className="navLink navlink-project"
+                className={`navLink navlink-project ${LinkActive ? 'home-timer-active' : ''}`}
                 to="/projects"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
@@ -133,7 +133,7 @@ function NavBar() {
                 </motion.span>
               </NavLink>
               <NavLink
-                className="navLink navlink-contact"
+                className={`navLink navlink-contact ${LinkActive ? 'home-timer-active' : ''}`}
                 to="/contact"
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
