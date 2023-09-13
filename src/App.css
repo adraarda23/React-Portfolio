@@ -2,13 +2,20 @@
     background-image: url("./images/background.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100vh;
-    background-attachment: fixed ;
-    background-color: rgb(241, 241, 241);
+    background-repeat: no-repeat; 
+    
+    background-attachment: fixed;       
+    webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    
 }
 @media (max-width:768px) {
     .App{
-        background-color: rgb(241, 241, 241);
-        background-image: none;
+        background-position: center;
+        background-size: cover; 
     }
     
 }
+
+

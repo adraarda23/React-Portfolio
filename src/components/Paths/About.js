@@ -41,6 +41,7 @@ function About() {
           <div className="about-body">
             <div className="about-left">
               <h3>Get to know me!</h3>
+              <div className="about-p">
               <p>
                 I'm a <b>Frontend Web Developer</b> building the Front-end of
                 Websites and Web Applications.
@@ -60,6 +61,7 @@ function About() {
                 matches my skills and experience, then don't hesitate to{" "}
                 <b>contact</b> me.
               </p>
+              </div>
             </div>
             <div className="about-right">
               <h3>My Skills</h3>

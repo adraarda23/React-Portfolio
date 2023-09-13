@@ -47,6 +47,10 @@
 
     
 }
+.projects-title{
+    width: 40%;
+
+}
 .case-study-btn{
     background-color: #fff;
     border: 2px solid #000;
@@ -73,6 +77,12 @@
         align-items: center;
         margin: 1.5rem 0rem;
         
+    }
+    .mouse{
+        display: none;
+    }
+    .projects-title{
+        width: 90%;
     }
     .project__inner-body-right{
         padding-top: 1.5rem;
@@ -117,6 +127,7 @@
         padding: 0.3rem 0rem;
         width: 90%;
     }
+
 }
 
 .scroll-effect {

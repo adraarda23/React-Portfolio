@@ -13,7 +13,7 @@
     border: none;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: RGB(255, 255, 255);
+    background-color: rgba(255, 255, 255,0.1);
     color: black;
     font-weight: bold;
 }
@@ -22,10 +22,10 @@ input,textarea{
     border: 1px solid black;
     border-radius: 5px !important;
     width: 40%;
-    background-color: RGB(255, 255, 255);
+    background-color: rgba(255, 255, 255,0.1) !important;
     resize: none;
     overflow: hidden;
-    height: 3rem;
+    height: 4rem;
     margin-right: 20px;
     
 }
@@ -75,10 +75,6 @@ span{
     justify-content: center;
     align-items: center;
     
-}
-input:hover , textarea:hover{
-    border: 2px solid black;
-    border-radius: 5px !important;
 }
 
   .contact{
