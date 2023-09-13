@@ -4,9 +4,24 @@ import "../Styles/CaseStudy.css";
 import tempImage from "../../images/download.png";
 import { Link } from "react-router-dom";
 import PageTransition from "../Animation/PageTransitions";
+import { motion } from "framer-motion";
+
+
+const fadeInAnimationVariants = {
+  initial:{
+    opacity:0,
+  },
+  animate: (index)=>({
+    opacity:1,
+    transition:{
+      delay:0.3 * index
+    }
+  })
+}
 
 function CaseStudy() {
   const { projectId } = useParams();
+
 
   const projectData = {
     "hafize-ana": {
@@ -14,7 +29,7 @@ function CaseStudy() {
       description:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
       link: "https://github.com/adraarda23/btu-sks-telegram-bot/tree/main",
-      tools: ["Python", "SQL Basics"],
+      tools: ["Python", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics"],
       image: "https://picsum.photos/400/300", // Resim yolunu ekledik
       activeLink:
         "https://github.com/adraarda23/btu-sks-telegram-bot/tree/main", //Buraya aktif kullanımdaki hali gelecek
@@ -61,9 +76,18 @@ function CaseStudy() {
           <h3>Tools Used</h3>
           <ul className="list-unstyled tools-used">
             {project.tools.map((tool, index) => (
-              <li className="tools-box" key={index}>
+              <motion.li className="tools-box" key={index}
+              
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              custom={index}
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              >
                 {tool}
-              </li>
+              </motion.li>
             ))}
           </ul>
         </div>

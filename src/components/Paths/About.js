@@ -43,7 +43,7 @@ function About() {
               <h3>Get to know me!</h3>
               <div className="about-p">
               <p>
-                I'm a <b>Frontend Web Developer</b> building the Front-end of
+                I'm a <b>FullStack Web Developer</b> building the 
                 Websites and Web Applications.
               </p>
               <br />
@@ -73,6 +73,9 @@ function About() {
                    initial="initial"
                    custom={index}
                    whileInView="animate"
+                   viewport={{
+                    once: true,
+                  }}
                    >
                     <h6>{skill}</h6>
                   </motion.div>

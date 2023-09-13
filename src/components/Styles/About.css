@@ -85,7 +85,7 @@ p a{
     .about-left h3,p{
         
         margin: auto;
-        padding-left: 1rem;
+        padding-left: 0.5rem;
     }
     .about-right h3{
         margin: auto;
