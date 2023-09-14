@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "../Styles/CaseStudy.css";
-import tempImage from "../../images/1463.png";
+import tempImage from "../../images/my-portfolio.png";
 import { Link } from "react-router-dom";
 import PageTransition from "../Animation/PageTransitions";
 import { motion } from "framer-motion";
@@ -24,13 +24,12 @@ function CaseStudy() {
 
 
   const projectData = {
-    "hafize-ana": {
-      title: "Hafize Ana",
+    "own-portfolio": {
+      title: "My Own Portfolio",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error non id pariatur quis cumque praesentium aperiam fugit quisquam adipisci eum nihil, maxime illo eligendi esse quaerat! Dolorem aspernatur facere enim.",
-      link: "https://github.com/adraarda23/btu-sks-telegram-bot/tree/main",
-      tools: ["Python", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics", "SQL Basics"],
-      image: "https://picsum.photos/400/300", // Resim yolunu ekledik
+      "This project was my first step into web development. I applied all of my current skills to build this portfolio website.",
+      link: "https://github.com/adraarda23/React-Portfolio",
+      tools: ["React","JavaScript","CSS","HTML"], 
       activeLink:
         "https://github.com/adraarda23/btu-sks-telegram-bot/tree/main", //Buraya aktif kullanımdaki hali gelecek
     },
@@ -66,7 +65,7 @@ function CaseStudy() {
         </button>
       </div>
       <div className="case-study-body">
-        <img src={project.image || tempImage} alt={project.title} />{" "}
+        <img src={project.image || tempImage} alt={project.title} className="project-image" />{" "}
         {/* Resmi dinamik olarak alıyoruz */}
         <div className="case-study-description">
           <h3>Project Overview</h3>

@@ -62,7 +62,7 @@ function NavBar() {
   useEffect(() => {
     setTimeout(() => {
       setLinkActive(false); 
-    }, 2500); 
+    }, 1500); 
   }, []);
 
   return (
