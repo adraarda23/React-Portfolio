@@ -35,7 +35,7 @@
 }
 
 .project-image {
-    min-width: 60%; 
+    width: 60%; 
     height: auto; 
 }
 
@@ -52,8 +52,8 @@
 
 }
 .case-study-btn{
-    background-color: #fff;
-    border: 2px solid #000;
+    background-color:rgba(255, 255, 255, 0.3);
+    border: 1px solid #000;
     border-radius: 5px;
     height: 3rem;
     width: 20% ;
@@ -68,8 +68,10 @@
 .case-study-btn a{
     text-decoration: none;
     color: #000;
-    font-weight: bold;
+    font-weight: 300;
 }
+
+
 
 @media (max-width:768px){
     .project__inner-body{

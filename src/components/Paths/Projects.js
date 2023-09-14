@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "../Styles/Projects.css";
-import tempImage from "../../images/download.png";
 import PageTransition from "../Animation/PageTransitions";
 import { motion } from "framer-motion";
+import tempImage from "../../images/1463.png";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -75,7 +75,7 @@ function Projects() {
                 <img
                   className="project-image"
                   src={tempImage}
-                  alt="projectImage"
+                  alt='<a href="http://www.freepik.com">Designed by zlatko_plamenov / Freepik</a>'
                 />
               </div>
               <div className={`project__inner-body-right`}>

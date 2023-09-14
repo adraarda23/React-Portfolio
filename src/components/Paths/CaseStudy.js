@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "../Styles/CaseStudy.css";
-import tempImage from "../../images/download.png";
+import tempImage from "../../images/1463.png";
 import { Link } from "react-router-dom";
 import PageTransition from "../Animation/PageTransitions";
 import { motion } from "framer-motion";

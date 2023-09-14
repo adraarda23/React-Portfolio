@@ -60,10 +60,9 @@ function NavBar() {
   }, []);
 
   useEffect(() => {
-    // "Home" linkine özel sınıfı ekler
     setTimeout(() => {
-      setLinkActive(false); // 3 saniye sonra sınıfı kaldırır
-    }, 2250); // 3000 milisaniye (3 saniye) gecikme
+      setLinkActive(false); 
+    }, 2500); 
   }, []);
 
   return (
