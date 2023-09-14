@@ -26,25 +26,21 @@ function Contact() {
           user_email: values.email,
           message: values.message,
         };
-    
+
         await emailjs.send(
-          "key",
-          "key",
+          "service_fxwetta",
+          "template_2kick9c",
           templateParams,
-          "key"
+          "6SkYNlzJ6mPrysTab"
         );
-    
-        // Mesaj gönderildikten sonra 2 saniye gecikme ekliyoruz
-        await new Promise((resolve) => setTimeout(resolve, 2000));
-    
+
         formik.resetForm();
-    
+
         console.log("Form submitted:", values);
       } catch (error) {
         console.error("Error:", error);
       }
-    }
-    ,
+    },
   });
 
   const notificationRef = useRef(null);
