@@ -4,6 +4,7 @@ import "../Styles/Projects.css";
 import PageTransition from "../Animation/PageTransitions";
 import { motion } from "framer-motion";
 import tempImage from "../../images/my-portfolio.png";
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -14,6 +15,17 @@ const fadeInAnimationVariants = {
     opacity: 1,
     y: 0,
   },
+};
+
+const iconVariants = {
+  start: { x: 0 },
+  end: { x: 5 }, 
+};
+
+const iconTransition = {
+  duration: 0.5,
+  repeat: Infinity, 
+  repeatType: "reverse", 
 };
 
 function Projects() {
@@ -63,14 +75,28 @@ function Projects() {
               <div className={`project__inner-body-right`}>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
-                <button className="case-study-btn">
+                <button className="case-study-btn mt-4">
                   <Link to={project.link}>Case Study</Link>
                 </button>
               </div>
             </motion.div>
           ))}
         </div>
+        <button
+            className="home-btn mb-4">
+            <Link to="/contact">Send Message
+            <motion.span
+              style={{ fontSize: "medium", marginLeft: "5px" , display:"inline-block",color:"#000" }}
+              variants={iconVariants}
+              transition={iconTransition}
+              animate="end" 
+            >
+              <KeyboardDoubleArrowRightIcon />
+            </motion.span>
+            </Link>
+          </button>
       </div>
+
     </PageTransition>
   );
 }

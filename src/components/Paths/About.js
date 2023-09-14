@@ -1,7 +1,9 @@
 import React from "react";
 import "../Styles/About.css";
 import PageTransition from "../Animation/PageTransitions";
-import {motion} from "framer-motion"
+import {motion} from "framer-motion";
+import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+import { Link } from "react-router-dom";
 
 const skills = [
   "HTML",
@@ -14,6 +16,18 @@ const skills = [
   "Python",
   "SQL Basics",
 ];
+
+const iconVariants = {
+  start: { x: 0 },
+  end: { x: 5 }, 
+};
+
+const iconTransition = {
+  duration: 0.5,
+  repeat: Infinity, 
+  repeatType: "reverse", 
+};
+
 const fadeInAnimationVariants = {
   initial:{
     opacity:0,
@@ -62,6 +76,22 @@ function About() {
                 <b>contact</b> me.
               </p>
               </div>
+              <motion.button
+            className="home-btn mt-3 mb-3"
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1.5, delay: 1.5 } }}
+          >
+            <Link to="/projects">My Projects
+            <motion.span
+              style={{ fontSize: "medium", marginLeft: "5px" , display:"inline-block",color:"#000" }}
+              variants={iconVariants}
+              transition={iconTransition}
+              animate="end" 
+            >
+              <KeyboardDoubleArrowRightIcon />
+            </motion.span>
+            </Link>
+          </motion.button>
             </div>
             <div className="about-right">
               <h3>My Skills</h3>
@@ -82,7 +112,9 @@ function About() {
                 ))}
               </div>
             </div>
+
           </div>
+
         </div>
       </div>
     </PageTransition>
