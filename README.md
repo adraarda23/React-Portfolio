@@ -1,6 +1,7 @@
 # Portfolyo
 
-![Portfolyo Ekran Görüntüsü](<img width="1454" alt="Screenshot 2023-09-14 at 13 59 06" src="https://github.com/adraarda23/React-Portfolio/assets/113470792/6df8035f-d942-4f05-a238-d5d69cf54365">)
+Portfolyo Ekran Görüntüsü
+<img width="1454" alt="Screenshot 2023-09-14 at 13 59 06" src="https://github.com/adraarda23/React-Portfolio/assets/113470792/6df8035f-d942-4f05-a238-d5d69cf54365">
 
 ## İçindekiler
 
@@ -27,7 +28,8 @@ Açıklama: Bu proje, Portfolio uygulamasının ön yüzünü geliştirmek için
 
 Teknolojiler: React, Redux, HTML, CSS
 
-![Proje Ekran Görüntüsü](<img width="1454" alt="Screenshot 2023-09-14 at 13 59 06" src="https://github.com/adraarda23/React-Portfolio/assets/113470792/6df8035f-d942-4f05-a238-d5d69cf54365">)
+Proje Ekran Görüntüsü
+<img width="1454" alt="Screenshot 2023-09-14 at 13 59 06" src="https://github.com/adraarda23/React-Portfolio/assets/113470792/6df8035f-d942-4f05-a238-d5d69cf54365">
 
 Proje bağlantısı: [Proje 1](https://github.com/adraarda23/React-Portfolio)
 
