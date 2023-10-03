@@ -26,17 +26,27 @@ function Contact() {
           user_email: values.email,
           message: values.message,
         };
-
-        await emailjs.send(
+    
+        const response = await emailjs.send(
           "service_fxwetta",
           "template_2kick9c",
           templateParams,
           "6SkYNlzJ6mPrysTab"
         );
-
-        formik.resetForm();
-
-        console.log("Form submitted:", values);
+    
+        if (response.status === 200) {
+          // E-posta başarıyla gönderildiğinde bildirimi göster
+          notificationRef.current.style.display = "block";
+          setTimeout(() => {
+            notificationRef.current.style.display = "none";
+          }, 4000);
+    
+          formik.resetForm();
+          console.log("Form submitted:", values);
+        } else {
+          // E-posta gönderimi başarısız olduğunda hata mesajını göster
+          console.error("Email sending failed:", response);
+        }
       } catch (error) {
         console.error("Error:", error);
       }
@@ -45,14 +55,6 @@ function Contact() {
 
   const notificationRef = useRef(null);
 
-  useEffect(() => {
-    if (formik.submitCount > 0) {
-      notificationRef.current.style.display = "block";
-      setTimeout(() => {
-        notificationRef.current.style.display = "none";
-      }, 4000);
-    }
-  }, [formik.submitCount]);
 
   return (
     <PageTransition>
